@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git@github.com-synerzip:nikhilwalvekar/nstatic.git"
   },
+  "scripts" : {
+    "start" : "node index.js"
+  },
   "keywords": [
     "node",
     "express"
