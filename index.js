@@ -5,10 +5,13 @@ var compress = require('compression');
 if (process.argv.length > 2) {
 	app.use("/", express.static(process.argv[2]));
 	app.use(compress({
-	  threshold: 100
+	  	threshold: 100
 	}));
 
 	var port = process.env.PORT || 8080;
+	if(process.env.PORT) {
+		port = process.env.PORT.split(';')[0];
+	}
 	app.listen(port, function(){
 		console.log("Listening... on ", port);
 	});
